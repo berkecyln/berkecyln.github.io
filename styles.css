@@ -137,6 +137,15 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 /* A second heading inside a column, such as certifications under education */
 .facts + .sub { margin-top: 1.7rem; padding-top: 1.3rem; border-top: 1px solid var(--line); }
 
+/* Two short entries sharing the width of one column, used by certifications.
+   The titles are long, so the monospace line steps down a size to fit. */
+.facts--pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+               gap: 1.3rem; align-items: start; }
+.facts--pair li { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
+.facts--pair strong { font-size: .91rem; line-height: 1.35; }
+.facts--pair .mono { font-size: .72rem; }
+@media (max-width: 880px) { .facts--pair { grid-template-columns: 1fr; gap: .9rem; } }
+
 /* Pinned cards, in the shape of GitHub pins */
 .pins { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 @media (max-width: 700px) { .pins { grid-template-columns: 1fr; } }
