@@ -134,10 +134,8 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .facts strong { display: block; font-weight: 600; font-size: .95rem; }
 .facts .mono { display: block; color: var(--mute); margin: .12rem 0 .2rem; }
 .facts span:not(.mono) { display: block; color: var(--soft); font-size: .91rem; }
-.certs { margin-top: 2.2rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
-.facts--row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
-@media (max-width: 760px) { .facts--row { grid-template-columns: 1fr; } }
-.facts--row li { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
+/* A second heading inside a column, such as certifications under education */
+.facts + .sub { margin-top: 1.7rem; padding-top: 1.3rem; border-top: 1px solid var(--line); }
 
 /* Pinned cards, in the shape of GitHub pins */
 .pins { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
