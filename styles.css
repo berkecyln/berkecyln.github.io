@@ -138,12 +138,13 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .facts + .sub { margin-top: 1.7rem; padding-top: 1.3rem; border-top: 1px solid var(--line); }
 
 /* Two short entries sharing the width of one column, used by certifications.
-   The titles are long, so the monospace line steps down a size to fit. */
+   Each cell is about 212px, which the titles only clear at .88rem, and which
+   the provider text only clears once the year moves to its own line. */
 .facts--pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
                gap: 1.3rem; align-items: start; }
 .facts--pair li { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
-.facts--pair strong { font-size: .91rem; line-height: 1.35; }
-.facts--pair .mono { font-size: .72rem; }
+.facts--pair strong { font-size: .88rem; line-height: 1.35; }
+.facts--pair .mono { font-size: .70rem; margin: .1rem 0 0; }
 @media (max-width: 880px) { .facts--pair { grid-template-columns: 1fr; gap: .9rem; } }
 
 /* Pinned cards, in the shape of GitHub pins */
