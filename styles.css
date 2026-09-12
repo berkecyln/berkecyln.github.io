@@ -99,7 +99,7 @@ html[data-theme="dark"] .icon-moon { display: block; fill: currentColor; stroke:
 .links--lg { font-size: 1rem; gap: 1.4rem; }
 
 /* Keyword chips, each jumps to the project it came from */
-.keys { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 2.2rem;
+.keys { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; margin-top: 2.2rem;
         padding-top: 1.6rem; border-top: 1px solid var(--line); }
 .keys a {
   font-family: var(--mono); font-size: .77rem; line-height: 1;
