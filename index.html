@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Berke Ceylan</title>
-<meta name="description" content="Computer science master's student at the University of Freiburg. Machine learning, computer vision and 3D perception.">
+<meta name="description" content="Computer science master's student at the University of Freiburg. Machine learning, AI and computer vision.">
 <link rel="canonical" href="https://berkecyln.github.io/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Berke Ceylan">
-<meta property="og:description" content="Computer science master's student at the University of Freiburg. Machine learning, computer vision and 3D perception.">
+<meta property="og:description" content="Computer science master's student at the University of Freiburg. Machine learning, AI and computer vision.">
 <meta property="og:url" content="https://berkecyln.github.io/">
 <meta property="og:image" content="https://berkecyln.github.io/assets/berke.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='system-ui'>B</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='Georgia,serif'>B</text></svg>">
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -22,7 +22,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Berke Ceylan",
-  "jobTitle": "Machine learning and computer vision",
+  "jobTitle": "Machine Learning | AI | Computer Vision",
   "url": "https://berkecyln.github.io/",
   "address": { "@type": "PostalAddress", "addressLocality": "Munich", "addressCountry": "DE" },
   "alumniOf": [
@@ -41,9 +41,9 @@
   <div class="wrap nav__inner">
     <a class="nav__brand" href="#top">Berke Ceylan</a>
     <nav class="nav__links" aria-label="Sections">
-      <a href="#work">Work</a>
+      <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#background">Background</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
@@ -55,22 +55,17 @@
 
 <main id="main">
 
-  <!-- Intro -->
+  <!-- Intro. Portrait sits left of the text. -->
   <section class="intro" id="top">
     <div class="wrap intro__inner">
-      <div>
+      <img class="portrait" src="assets/berke.jpg" alt="Portrait of Berke Ceylan"
+           width="531" height="709" fetchpriority="high">
+      <div class="intro__text">
         <h1>Berke Ceylan</h1>
-        <p class="role">Machine learning and computer vision</p>
+        <p class="role">Machine Learning | AI | Computer Vision</p>
         <p class="lede">
           I am a computer science master's student at the University of Freiburg, on the AI
           specialisation path, currently writing my thesis on extending SAM 3D to video.
-          Most of my work sits where learned models meet the physical world: Gaussian Splatting
-          world models on a real Franka Panda arm, diffusion fine tuning, and AutoML pipelines
-          that stay inside a compute budget.
-        </p>
-        <p class="lede">
-          Before Freiburg I studied at Sabancı University in Istanbul, and I have spent three
-          years building software at Endress+Hauser, Amadeus and Logo Yazılım.
         </p>
         <p class="links">
           <a href="assets/BerkeCeylan_CV.pdf" download>CV (PDF)</a>
@@ -80,226 +75,281 @@
         </p>
         <p class="place">Munich, Germany</p>
       </div>
-      <img class="portrait" src="assets/berke.jpg" alt="Portrait of Berke Ceylan" width="531" height="709" fetchpriority="high">
+    </div>
+
+    <!-- Keywords. Each one jumps to the project it came from. -->
+    <div class="wrap">
+      <nav class="keys" aria-label="Skills, linked to the related project">
+        <a href="#drema">Computer vision</a>
+        <a href="#drema">Gaussian Splatting</a>
+        <a href="#drema">ROS and robotics</a>
+        <a href="#sam4d">SAM 3D</a>
+        <a href="#sam4d">3D reconstruction</a>
+        <a href="#sdlora">Diffusion models</a>
+        <a href="#sdlora">LoRA fine tuning</a>
+        <a href="#expertrl">Reinforcement learning</a>
+        <a href="#expertrl">AutoML</a>
+        <a href="#sagi">Full stack web</a>
+      </nav>
     </div>
   </section>
 
-  <!-- Work -->
-  <section class="section" id="work">
+  <!-- Education, skills, certifications -->
+  <section class="section" id="about">
     <div class="wrap">
-      <h2>Work</h2>
+      <h2><span class="num">01</span>About</h2>
 
-      <article class="thesis">
-        <p class="meta">Master's thesis <span class="sep">&middot;</span> University of Freiburg <span class="sep">&middot;</span> since July 2026 <span class="sep">&middot;</span> in progress</p>
-        <h3>SAM4D: from single image 3D to temporally coherent video</h3>
-        <p>
-          SAM 3D Objects reconstructs an object from one image. Run it frame by frame on a video
-          and the geometry jitters, because every frame is reconstructed in isolation. My thesis
-          analyses where that incoherence comes from and extends the model toward reconstructions
-          that hold together across a sequence.
-        </p>
-        <p>
-          It is built as a research codebase rather than a pile of scripts: a <code>sam4d</code>
-          command line tool covering dataset download, preprocessing, config and data validation
-          and multi modal visualisation, driven by config over the CO3D dataset, with an
-          environment doctor so experiments reproduce.
-        </p>
-        <p class="tech">Python <span class="sep">&middot;</span> PyTorch <span class="sep">&middot;</span> SAM 3D <span class="sep">&middot;</span> 4D reconstruction <span class="sep">&middot;</span> CO3D <span class="sep">&middot;</span> Multi view geometry</p>
-        <p class="note">The repository stays private while the thesis is under way. I am glad to walk through it in a conversation.</p>
-      </article>
+      <div class="two">
+        <div>
+          <h3 class="sub">Education</h3>
+          <ul class="facts">
+            <li>
+              <strong>M.Sc. Computer Science, AI specialisation</strong>
+              <span class="mono">University of Freiburg <b class="sep">/</b> since Oct 2024</span>
+              <span>Grade 1.7. Machine learning, deep learning, computer vision, reinforcement learning, AutoML.</span>
+            </li>
+            <li>
+              <strong>B.Sc. Computer Science, minor in Finance</strong>
+              <span class="mono">Sabancı University <b class="sep">/</b> Oct 2019 to Jul 2024</span>
+              <span>Grade 1.4, GPA 3.74 of 4.0. Dean's High Honor List, full Metin Sabancı Excellence Scholarship.</span>
+            </li>
+          </ul>
+        </div>
 
-      <div class="grid">
-
-        <article class="card card--wide">
-          <div class="card__media">
-            <video src="assets/projects/drema.mp4" poster="assets/projects/drema-poster.jpg"
-                   autoplay muted loop playsinline preload="metadata"
-                   aria-label="DreMa pipeline running on a Franka Panda robot arm"></video>
-          </div>
-          <div class="card__body">
-            <p class="meta">University of Freiburg <span class="sep">&middot;</span> Oct 2025 to Jun 2026</p>
-            <h3>DreMa: a Gaussian Splatting world model on a real robot</h3>
-            <p>
-              I took the DreMa framework (ICLR 2025) out of simulation and onto a Franka Emika
-              Panda: automated RGBD data collection with Bézier arch, orbit and line scan
-              patterns, camera to robot calibration, Gaussian Splatting reconstruction, augmented
-              demonstration generation, and a PerAct policy trained and then deployed back on the
-              hardware.
-            </p>
-            <p>
-              I replaced the original DEVA segmentation backend with Meta's SAM 3, including a
-              visually prompted video tracker that propagates masks across every frame, and
-              rebuilt point cloud aggregation and mesh generation for the noisier scans you get
-              in a real lab.
-            </p>
-            <p class="tech">Python <span class="sep">&middot;</span> CUDA <span class="sep">&middot;</span> Gaussian Splatting <span class="sep">&middot;</span> SAM 3 <span class="sep">&middot;</span> ROS <span class="sep">&middot;</span> Open3D <span class="sep">&middot;</span> OpenCV <span class="sep">&middot;</span> PerAct</p>
-            <p class="links">
-              <a href="https://github.com/berkecyln/drema_project" target="_blank" rel="noopener">Repository</a>
-              <a href="https://github.com/berkecyln/robot_io" target="_blank" rel="noopener">Robot IO layer</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__media">
-            <img src="assets/projects/sdlora.jpg" alt="Training and inference pipeline for SD LoRA Mensa" loading="lazy">
-          </div>
-          <div class="card__body">
-            <p class="meta">Deep Learning Lab <span class="sep">&middot;</span> Jul to Aug 2025</p>
-            <h3>SD LoRA Mensa</h3>
-            <p>
-              Fine tuned Stable Diffusion v1.4 with LoRA adapters on both the UNet and the CLIP
-              text encoder, teaching it a new concept token <code>&lt;mensafood&gt;</code> from
-              roughly 200 cafeteria photographs. Negative prompting with forced classifier free
-              guidance strips out cutlery and clutter. Hyperparameters were tuned with Optuna
-              under a Hyperband pruner.
-            </p>
-            <p class="tech">PyTorch <span class="sep">&middot;</span> Stable Diffusion <span class="sep">&middot;</span> LoRA <span class="sep">&middot;</span> HF Diffusers <span class="sep">&middot;</span> Optuna</p>
-            <p class="links">
-              <a href="https://github.com/berkecyln/SD-LoRA-Mensa" target="_blank" rel="noopener">Repository</a>
-              <a href="https://github.com/berkecyln/SD-LoRA-Mensa/blob/main/assets/Mensa-LoRA-Poster-Group18.pdf" target="_blank" rel="noopener">Poster</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__media">
-            <img src="assets/projects/expertrl.jpg" alt="ExpertRL HPO pipeline architecture" loading="lazy">
-          </div>
-          <div class="card__body">
-            <p class="meta">AutoML course <span class="sep">&middot;</span> Jul to Aug 2025</p>
-            <h3>ExpertRL HPO</h3>
-            <p>
-              A one click AutoML pipeline for text classification. A DQN agent reads a dataset's
-              meta features and picks the model complexity tier, then multi fidelity BOHB tunes
-              inside that tier on a tight budget, each tier with its own search space. The
-              accuracy BOHB measures flows straight back into the agent's reward.
-            </p>
-            <p class="tech">PyTorch <span class="sep">&middot;</span> DQN <span class="sep">&middot;</span> BOHB <span class="sep">&middot;</span> SMAC3 <span class="sep">&middot;</span> AutoML</p>
-            <p class="links">
-              <a href="https://github.com/berkecyln/ExpertRL-HPO" target="_blank" rel="noopener">Repository</a>
-              <a href="https://github.com/berkecyln/ExpertRL-HPO/blob/main/assets/ExpertRL-HPO-poster.pdf" target="_blank" rel="noopener">Poster</a>
-            </p>
-          </div>
-        </article>
-
+        <div>
+          <h3 class="sub">Skills</h3>
+          <ul class="facts">
+            <li><strong>Machine learning</strong><span>PyTorch, Hugging Face, Diffusers, LoRA, reinforcement learning, BOHB, SMAC3, AutoML</span></li>
+            <li><strong>Vision and 3D</strong><span>OpenCV, Open3D, Gaussian Splatting, SAM 3, SAM 3D, ROS, CUDA</span></li>
+            <li><strong>Software</strong><span>Python, TypeScript, Java, C#, SQL and PL/SQL, Node.js, Vue.js, Docker, Git</span></li>
+            <li><strong>Languages</strong><span>Turkish (native), English (C1), German (B1)</span></li>
+          </ul>
+        </div>
       </div>
 
-      <h3 class="also__head">Also built</h3>
-      <ul class="also">
-        <li>
-          <a href="https://github.com/berkecyln/alphaearth-deforestation-detection" target="_blank" rel="noopener">AlphaEarth deforestation detection</a>
-          <span>Pixel level deforestation from yearly satellite embeddings, gradient boosted on fused weak labels.</span>
-          <em>Python, Hydra</em>
-        </li>
-        <li>
-          <a href="https://sagi-ledger-web.vercel.app" target="_blank" rel="noopener">Sagi Ledger</a>
-          <span>Income and expense tracker, deployed and in daily use.</span>
-          <em>TypeScript</em>
-        </li>
-        <li>
-          <a href="https://shika-kb.vercel.app" target="_blank" rel="noopener">Shika KB</a>
-          <span>Knowledge base that publishes my Obsidian notes from the master's.</span>
-          <em>JavaScript</em>
-        </li>
-        <li>
-          <a href="https://github.com/berkecyln/pdf-hybrid-extractor" target="_blank" rel="noopener">PDF Hybrid Extractor</a>
-          <span>Combined text and image extraction for PDF documents.</span>
-          <em>Python</em>
-        </li>
-        <li>
-          <span class="also__name">Exam Scheduling System</span>
-          <span>University timetabling without conflicts. Bachelor's graduation project.</span>
-          <em>Vue.js, Node.js, SQL</em>
-        </li>
-      </ul>
+      <div class="certs">
+        <h3 class="sub">Certifications</h3>
+        <ul class="facts facts--row">
+          <li><strong>Deep Learning Specialization</strong><span class="mono">DeepLearning.AI <b class="sep">/</b> 2025</span></li>
+          <li><strong>Supervised Machine Learning</strong><span class="mono">Stanford and DeepLearning.AI <b class="sep">/</b> 2024</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pinned, in the shape of GitHub pins -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <h2><span class="num">02</span>Pinned</h2>
+      <div class="pins">
+
+        <a class="pin" href="#drema">
+          <span class="pin__top">
+            <svg class="pin__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+            <span class="pin__name">drema_project</span>
+          </span>
+          <span class="pin__desc">Gaussian Splatting world model deployed on a real Franka Panda, with automated data collection and SAM 3 segmentation.</span>
+          <span class="pin__foot"><i class="dot dot--py"></i>Python</span>
+        </a>
+
+        <a class="pin" href="#expertrl">
+          <span class="pin__top">
+            <svg class="pin__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+            <span class="pin__name">ExpertRL-HPO</span>
+          </span>
+          <span class="pin__desc">AutoML pipeline for text classification. A DQN agent picks the model tier, then BOHB tunes it on a tight budget.</span>
+          <span class="pin__foot"><i class="dot dot--py"></i>Python</span>
+        </a>
+
+        <a class="pin" href="#sdlora">
+          <span class="pin__top">
+            <svg class="pin__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+            <span class="pin__name">SD-LoRA-Mensa</span>
+          </span>
+          <span class="pin__desc">Stable Diffusion v1.4 fine tuned with LoRA to generate cafeteria dishes from a learned concept token.</span>
+          <span class="pin__foot"><i class="dot dot--py"></i>Python</span>
+        </a>
+
+        <a class="pin" href="#sagi">
+          <span class="pin__top">
+            <svg class="pin__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+            <span class="pin__name">sagi-ledger-web</span>
+          </span>
+          <span class="pin__desc">Income and expense tracker, deployed and in daily use.</span>
+          <span class="pin__foot"><i class="dot dot--ts"></i>TypeScript</span>
+        </a>
+
+      </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="section section--alt" id="experience">
+  <section class="section" id="experience">
     <div class="wrap">
-      <h2>Experience</h2>
+      <h2><span class="num">03</span>Experience</h2>
       <ol class="timeline">
         <li>
-          <p class="when">Since May 2025</p>
+          <p class="when mono">Since May 2025</p>
           <div>
             <h3>Frontend Developer, Werkstudent</h3>
             <p class="org">Endress+Hauser Group, Freiburg</p>
             <p>Built and extended User Management Flow features for internal customer service tools.</p>
-            <p class="tech">Java <span class="sep">&middot;</span> TypeScript <span class="sep">&middot;</span> Vaadin <span class="sep">&middot;</span> Tomcat</p>
+            <p class="tech mono">Java <b class="sep">/</b> TypeScript <b class="sep">/</b> Vaadin <b class="sep">/</b> Tomcat</p>
           </div>
         </li>
         <li>
-          <p class="when">Jul to Sep 2023</p>
+          <p class="when mono">Jul to Sep 2023</p>
           <div>
             <h3>Software Developer Intern</h3>
             <p class="org">Amadeus, Istanbul</p>
             <p>Developed SOAP and PL/SQL web services, and improved Oracle DB LOB storage efficiency.</p>
-            <p class="tech">PL/SQL <span class="sep">&middot;</span> SOAP <span class="sep">&middot;</span> Oracle DB</p>
+            <p class="tech mono">PL/SQL <b class="sep">/</b> SOAP <b class="sep">/</b> Oracle DB</p>
           </div>
         </li>
         <li>
-          <p class="when">Sep to Dec 2022</p>
+          <p class="when mono">Sep to Dec 2022</p>
           <div>
             <h3>Test Automation Specialist</h3>
             <p class="org">Logo Yazılım, Istanbul</p>
             <p>Built an automation project that streamlined the QA team's testing process from end to end.</p>
-            <p class="tech">JavaScript <span class="sep">&middot;</span> Katalon Studio</p>
+            <p class="tech mono">JavaScript <b class="sep">/</b> Katalon Studio</p>
           </div>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- Background -->
-  <section class="section" id="background">
-    <div class="wrap two">
-      <div>
-        <h2>Education</h2>
-        <div class="entry">
-          <h3>M.Sc. Computer Science, AI specialisation</h3>
-          <p class="org">University of Freiburg <span class="sep">&middot;</span> since Oct 2024</p>
-          <p>Grade 1.7. Machine Learning, Deep Learning, Computer Vision, Advanced Deep Learning, Reinforcement Learning, AutoML.</p>
-        </div>
-        <div class="entry">
-          <h3>B.Sc. Computer Science, minor in Finance</h3>
-          <p class="org">Sabancı University <span class="sep">&middot;</span> Oct 2019 to Jul 2024</p>
-          <p>Grade 1.4, GPA 3.74 of 4.0. Dean's High Honor List, and a full Metin Sabancı Excellence Scholarship.</p>
-        </div>
-        <div class="entry">
-          <h3>Certifications</h3>
-          <p>Deep Learning Specialization, DeepLearning.AI, 2025.<br>
-             Supervised Machine Learning, Stanford and DeepLearning.AI, 2024.</p>
-        </div>
-      </div>
+  <!-- Full project list -->
+  <section class="section section--alt" id="projects">
+    <div class="wrap">
+      <h2><span class="num">04</span>Projects</h2>
 
-      <div>
-        <h2>Skills</h2>
-        <div class="entry">
-          <h4>Machine learning</h4>
-          <p>PyTorch, Hugging Face, Diffusers, LoRA, reinforcement learning, BOHB, SMAC3, AutoML</p>
+      <article class="project" id="sam4d">
+        <div class="project__text">
+          <p class="meta mono">Master's thesis <b class="sep">/</b> University of Freiburg <b class="sep">/</b> since Jul 2026 <b class="sep">/</b> in progress</p>
+          <h3>SAM4D: from single image 3D to temporally coherent video</h3>
+          <p>
+            SAM 3D Objects reconstructs an object from one image. Run it frame by frame on a video
+            and the geometry jitters, because every frame is reconstructed in isolation. My thesis
+            analyses where that incoherence comes from and extends the model toward reconstructions
+            that hold together across a sequence.
+          </p>
+          <p>
+            It is built as a research codebase rather than a pile of scripts: a <code>sam4d</code>
+            command line tool covering dataset download, preprocessing, config and data validation
+            and multi modal visualisation, driven by config over the CO3D dataset, with an
+            environment doctor so experiments reproduce.
+          </p>
+          <p class="tech mono">Python <b class="sep">/</b> PyTorch <b class="sep">/</b> SAM 3D <b class="sep">/</b> 4D reconstruction <b class="sep">/</b> CO3D <b class="sep">/</b> Multi view geometry</p>
+          <p class="note">The repository stays private while the thesis is under way. I am glad to walk through it in a conversation.</p>
         </div>
-        <div class="entry">
-          <h4>Vision and 3D</h4>
-          <p>OpenCV, Open3D, Gaussian Splatting, SAM 3, SAM 3D, ROS, CUDA</p>
+      </article>
+
+      <article class="project" id="drema">
+        <div class="project__text">
+          <p class="meta mono">University of Freiburg <b class="sep">/</b> Oct 2025 to Jun 2026</p>
+          <h3>DreMa: a Gaussian Splatting world model on a real robot</h3>
+          <p>
+            I took the DreMa framework (ICLR 2025) out of simulation and onto a Franka Emika Panda:
+            automated RGBD data collection with Bézier arch, orbit and line scan patterns, camera
+            to robot calibration, Gaussian Splatting reconstruction, augmented demonstration
+            generation, and a PerAct policy trained and then deployed back on the hardware.
+          </p>
+          <p>
+            I replaced the original DEVA segmentation backend with Meta's SAM 3, including a
+            visually prompted video tracker that propagates masks across every frame, and rebuilt
+            point cloud aggregation and mesh generation for the noisier scans you get in a real lab.
+          </p>
+          <p class="tech mono">Python <b class="sep">/</b> CUDA <b class="sep">/</b> Gaussian Splatting <b class="sep">/</b> SAM 3 <b class="sep">/</b> ROS <b class="sep">/</b> Open3D <b class="sep">/</b> PerAct</p>
+          <p class="links">
+            <a href="https://github.com/berkecyln/drema_project" target="_blank" rel="noopener">Repository</a>
+            <a href="https://github.com/berkecyln/robot_io" target="_blank" rel="noopener">Robot IO layer</a>
+          </p>
         </div>
-        <div class="entry">
-          <h4>Software</h4>
-          <p>Python, TypeScript, Java, C#, SQL and PL/SQL, Node.js, Vue.js, Docker, Git</p>
+        <div class="project__fig">
+          <video src="assets/projects/drema.mp4" poster="assets/projects/drema-poster.jpg"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="DreMa pipeline running on a Franka Panda robot arm"></video>
         </div>
-        <div class="entry">
-          <h4>Languages</h4>
-          <p>Turkish (native), English (C1), German (B1)</p>
+      </article>
+
+      <article class="project" id="sdlora">
+        <div class="project__text">
+          <p class="meta mono">Deep Learning Lab <b class="sep">/</b> Jul to Aug 2025</p>
+          <h3>SD LoRA Mensa</h3>
+          <p>
+            Fine tuned Stable Diffusion v1.4 with LoRA adapters on both the UNet and the CLIP text
+            encoder, teaching it a new concept token <code>&lt;mensafood&gt;</code> from roughly 200
+            cafeteria photographs. Negative prompting with forced classifier free guidance strips
+            out cutlery and clutter. Hyperparameters were tuned with Optuna under a Hyperband pruner.
+          </p>
+          <p class="tech mono">PyTorch <b class="sep">/</b> Stable Diffusion <b class="sep">/</b> LoRA <b class="sep">/</b> HF Diffusers <b class="sep">/</b> Optuna</p>
+          <p class="links">
+            <a href="https://github.com/berkecyln/SD-LoRA-Mensa" target="_blank" rel="noopener">Repository</a>
+            <a href="https://github.com/berkecyln/SD-LoRA-Mensa/blob/main/assets/Mensa-LoRA-Poster-Group18.pdf" target="_blank" rel="noopener">Poster</a>
+          </p>
         </div>
-      </div>
+        <div class="project__fig">
+          <img src="assets/projects/sdlora.jpg" alt="Training and inference pipeline for SD LoRA Mensa" loading="lazy">
+        </div>
+      </article>
+
+      <article class="project" id="expertrl">
+        <div class="project__text">
+          <p class="meta mono">AutoML course <b class="sep">/</b> Jul to Aug 2025</p>
+          <h3>ExpertRL HPO</h3>
+          <p>
+            A one click AutoML pipeline for text classification. A DQN agent reads a dataset's meta
+            features and picks the model complexity tier, then multi fidelity BOHB tunes inside that
+            tier on a tight budget, each tier with its own search space. The accuracy BOHB measures
+            flows straight back into the agent's reward.
+          </p>
+          <p class="tech mono">PyTorch <b class="sep">/</b> DQN <b class="sep">/</b> BOHB <b class="sep">/</b> SMAC3 <b class="sep">/</b> AutoML</p>
+          <p class="links">
+            <a href="https://github.com/berkecyln/ExpertRL-HPO" target="_blank" rel="noopener">Repository</a>
+            <a href="https://github.com/berkecyln/ExpertRL-HPO/blob/main/assets/ExpertRL-HPO-poster.pdf" target="_blank" rel="noopener">Poster</a>
+          </p>
+        </div>
+        <div class="project__fig">
+          <img src="assets/projects/expertrl.jpg" alt="ExpertRL HPO pipeline architecture" loading="lazy">
+        </div>
+      </article>
+
+      <article class="project" id="sagi">
+        <div class="project__text">
+          <p class="meta mono">Personal <b class="sep">/</b> 2026</p>
+          <h3>Sagi Ledger</h3>
+          <p>
+            An income and expense tracker I built for my own daily use and then kept running.
+            Deployed and live, which means it has to survive real data rather than a demo dataset.
+          </p>
+          <p class="tech mono">TypeScript <b class="sep">/</b> React <b class="sep">/</b> Vercel</p>
+          <p class="links">
+            <a href="https://sagi-ledger-web.vercel.app" target="_blank" rel="noopener">Live app</a>
+            <a href="https://github.com/berkecyln/sagi-ledger-web" target="_blank" rel="noopener">Repository</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project" id="exam">
+        <div class="project__text">
+          <p class="meta mono">Sabancı University <b class="sep">/</b> Oct 2023 to Jun 2024</p>
+          <h3>Exam Scheduling System</h3>
+          <p>
+            A web system that generates university exam timetables without conflicts, built as my
+            bachelor's graduation project.
+          </p>
+          <p class="tech mono">Vue.js <b class="sep">/</b> Node.js <b class="sep">/</b> SQL</p>
+        </div>
+      </article>
+
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="section section--alt" id="contact">
+  <section class="section" id="contact">
     <div class="wrap">
-      <h2>Contact</h2>
+      <h2><span class="num">05</span>Contact</h2>
       <p class="links links--lg">
         <a href="mailto:berkeceylan12@hotmail.com">berkeceylan12@hotmail.com</a>
         <a href="assets/BerkeCeylan_CV.pdf" download>CV (PDF)</a>
@@ -314,7 +364,7 @@
 <footer class="footer">
   <div class="wrap footer__inner">
     <span>Berke Ceylan, <span id="year">2026</span></span>
-    <span>Munich, Germany</span>
+    <span class="mono">Munich, Germany</span>
   </div>
 </footer>
 
